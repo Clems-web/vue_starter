@@ -23,7 +23,7 @@
                 <button
                         class="btn btn-primary"
                         @click.prevent="changeTheme()"
-                >{{ `${theme}` }}
+                >{{ `${theme}`.charAt(0).toUpperCase() + `${theme}`.substring(1) }}
                 </button>
             </form>
         </div>
@@ -36,8 +36,7 @@ export default {
     props: ['pages', 'activePage', 'navLinkClick'],
     data() {
         return {
-            theme: 'light',
-            text: 'Dark'
+            theme: 'light'
         }
     },
     methods: {
