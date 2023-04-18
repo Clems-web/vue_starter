@@ -23,7 +23,7 @@
                 <button
                         class="btn btn-primary"
                         @click.prevent="changeTheme()"
-                >Toggle
+                >{{ `${theme}` }}
                 </button>
             </form>
         </div>
@@ -37,6 +37,7 @@ export default {
     data() {
         return {
             theme: 'light',
+            text: 'Dark'
         }
     },
     methods: {
